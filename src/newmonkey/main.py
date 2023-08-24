@@ -15,7 +15,9 @@ def main():
             print("Your system is not supported. Please create an issue on GitHub.")
             return 1
         elif not args.discord_cache_dir.exists():
-            print("Discord cache folder autodection was unsuccessful. Use the -d flag.")
+            print(
+                "Discord cache folder auto-detection was unsuccessful. Use the -d flag."
+            )
             return 1
 
     print(f"Using discord cache folder {str(args.discord_cache_dir)!r}.")

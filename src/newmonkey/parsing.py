@@ -194,10 +194,10 @@ def process_all_files(
         print()
         print("\nDone! ✨ 🍰 ✨")
         print(
-            f"{files_count - sorted_count} items were not exported as there are not parsable, or not an image while --all-files was not used."  # noqa: E501
+            f"{files_count - sorted_count} items were not exported as they are not parsable, or not images while --all-files flag was not used."  # noqa: E501
         )
         print(
-            f"Ignored {files_count - index} items from cache folder that are not cached data."  # noqa: E501
+            f"{files_count - index} items were ignored from cache folder as they are not cached data."  # noqa: E501
         )
         print(f"Took {(end_time - start_time):.2f}s.")
 
