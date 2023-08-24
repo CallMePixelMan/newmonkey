@@ -9,7 +9,7 @@ import magic
 
 
 END_SUFFIX = b"\x41\x0D\x97\x45\x6F\xFA\xF4\x01\x00\x00\x00"
-START_SUFFIX = b"\x30\x5C\x72\xA7\x1B\x6D\xFB\xFC"
+START_PREFIX = b"\x30\x5C\x72\xA7\x1B\x6D\xFB\xFC"
 
 
 class InvalidCacheFileFormat(Exception):
@@ -58,7 +58,7 @@ def parse_cache_file(cache_file_data: bytes) -> tuple[bytes, str, str | None, st
     # Remaining fill data stores some miscellaneous metadata (for example, about
     # Cloudflare) and is not usefull in our case.
 
-    if not cache_file_data.startswith(START_SUFFIX):
+    if not cache_file_data.startswith(START_PREFIX):
         raise InvalidCacheFileFormat(
             "Cache data did not start with expected start prefix."
         )
