@@ -1,0 +1,20 @@
+[project]
+name = "newmonkey"
+version = "1.0.0"
+description = "cli tool to convert your discord cache back to the original files"
+authors = [
+    {name = "CallMePixelMan", email = ""},
+]
+dependencies = [
+    "python-magic>=0.4.27",
+]
+requires-python = ">=3.11"
+readme = "README.md"
+license = {text = "MIT"}
+
+[project.scripts]
+newmonkey = "newmonkey.main:main"
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
