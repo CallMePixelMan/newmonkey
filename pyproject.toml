@@ -1,7 +1,7 @@
 [project]
 name = "newmonkey"
-version = "1.0.0"
-description = "cli tool to convert your discord cache back to the original files"
+version = "1.0.2"
+description = "A cli tool to convert your discord cache back to the original files."
 authors = [
     {name = "CallMePixelMan", email = ""},
 ]
@@ -11,6 +11,9 @@ dependencies = [
 requires-python = ">=3.11"
 readme = "README.md"
 license = {text = "MIT"}
+
+[project.urls]
+Homepage = "https://github.com/CallMePixelMan/newmonkey"
 
 [project.scripts]
 newmonkey = "newmonkey.main:main"
